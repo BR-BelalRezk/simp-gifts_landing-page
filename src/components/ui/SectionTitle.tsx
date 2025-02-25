@@ -1,8 +1,7 @@
 "use client";
 import useTextSplitedAnimation from "@/hooks/useTextSplitAnimation";
-import { stagger, useAnimate, useInView } from "motion/react";
+import { useInView } from "motion/react";
 import { useEffect } from "react";
-import SplitType from "split-type";
 
 export default function SectionTitle({
   textOne,
@@ -24,27 +23,9 @@ export default function SectionTitle({
     }
   }, [isPInView, pEnter]);
 
-  const [h2Scope, h2Enter] = useAnimate();
-  useEffect(() => {
-    new SplitType(h2Scope.current, { types: "chars,lines", tagName: "span" });
-  }, [h2Scope]);
-  const enterAnimation = () =>
-    h2Enter(
-      h2Scope.current.querySelectorAll(".char"),
-      { opacity: 1 },
-      { duration: 0.5, delay: stagger(0.2) }
-    );
-  const isInView = useInView(h2Scope, { once: true, amount: 0.3 });
-
-  useEffect(() => {
-    if (isInView) {
-      enterAnimation();
-    }
-  }, [isInView, enterAnimation]);
-
   return (
     <div className="flex flex-col items-start gap-5 md:gap-10">
-      <h2 ref={h2Scope} className=" relative w-fit">
+      <h2 className=" relative w-fit">
         <span className="font-yellowTail relative z-20  font-normal text-[38px] md:text-[97px] md:leading-[82.45px] leading-[43.7px] text-black-100">
           {textOne}
         </span>
