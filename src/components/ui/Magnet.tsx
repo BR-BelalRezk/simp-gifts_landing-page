@@ -32,7 +32,7 @@ export default function Magnetic({
       xTo(x);
       yTo(y);
     });
-    ref.current?.addEventListener("mouseleave", (e) => {
+    ref.current?.addEventListener("mouseleave", () => {
       xTo(0);
       yTo(0);
     });
