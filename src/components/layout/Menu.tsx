@@ -141,7 +141,7 @@ const MenuListItem = ({
         },
         close: {
           opacity: 0,
-          y: -25,
+          y: 25,
           transition: { duration: 0.3 },
         },
       }}

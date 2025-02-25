@@ -27,6 +27,7 @@ export default {
         },
         white: {
           100: "#FAFAFA",
+          200: "#F6E2E0",
           body: "#FAF9F6",
         },
         black: {

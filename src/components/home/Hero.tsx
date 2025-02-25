@@ -1,12 +1,20 @@
 import Image from "next/image";
 import heroBG from "@/assets/images/heroBG.png";
 import heroImage from "@/assets/images/heroImage.png";
+import smallAngel from "@/assets/images/smallAngel.png";
 import Button from "../ui/Button";
 import Magnetic from "../ui/Magnet";
 
 export default function Hero() {
   return (
-    <section className="relative h-[110vh] md:h-screen">
+    <section id="hero" className="relative h-[110vh] md:h-screen scroll-mt-96">
+      <figure>
+        <Image
+          src={smallAngel}
+          alt="small angel"
+          className=" absolute -bottom-14 md:-bottom-24 right-0 h-[90px] w-[100px] md:h-[164px] md:w-[179px]"
+        />
+      </figure>
       <figure className="absolute h-full w-screen bg-[#FCD6D6] -z-10">
         <Image
           src={heroBG}
@@ -37,13 +45,8 @@ export default function Hero() {
             <span>Simp Gifts is the wishlist platform built for creators.</span>
           </p>
         </div>
-        <Magnetic className="w-fit">
-          <Button
-            isCircle
-            className="self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto"
-          >
-            Start Now
-          </Button>
+        <Magnetic className="w-fit self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto">
+          <Button isCircle>Start Now</Button>
         </Magnetic>
       </article>
     </section>

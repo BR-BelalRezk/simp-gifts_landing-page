@@ -36,10 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ scrollbarWidth: "none" }}>
       <Lenis>
         <body
-          className={`${yellowTail.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-clip`}
+          className={`${yellowTail.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-clip relative`}
         >
           {children}
         </body>

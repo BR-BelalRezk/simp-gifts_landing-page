@@ -1,26 +1,23 @@
 "use client";
-
-import { ReactLenis } from "lenis/react";
-import type { LenisRef } from "lenis/react";
-import { cancelFrame, frame } from "motion";
+import gsap from "gsap";
+import { LenisRef, ReactLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
 
 export default function Lenis({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<LenisRef>(null);
 
   useEffect(() => {
-    function update(data: { timestamp: number }) {
-      const time = data.timestamp;
-      lenisRef.current?.lenis?.raf(time);
+    function update(time: number) {
+      lenisRef.current?.lenis?.raf(time * 1000);
     }
 
-    frame.update(update, true);
+    gsap.ticker.add(update);
 
-    return () => cancelFrame(update);
+    return () => gsap.ticker.remove(update);
   }, []);
 
   return (
-    <ReactLenis options={{ autoRaf: false }} ref={lenisRef}>
+    <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
       {children}
     </ReactLenis>
   );
