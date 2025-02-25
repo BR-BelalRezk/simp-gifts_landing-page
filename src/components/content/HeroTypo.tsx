@@ -32,7 +32,7 @@ function HeroHeading() {
     <motion.h1
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1, delay: 1.3 }}
       className="text-center"
     >
       <span className="font-normal block z-20 font-yellowTail text-white-body  text-[38px] leading-[43.7px] md:text-[97px] md:leading-[82.45px]">
