@@ -5,6 +5,7 @@ import { usePresence, motion } from "motion/react";
 import { useEffect } from "react";
 import useTextSplitedAnimation from "@/hooks/useTextSplitAnimation";
 import { stepsItems } from "@/constants";
+import StepThinkerImage from "./StepThinkerImage";
 
 export default function StepItem({
   item,
@@ -22,7 +23,7 @@ export default function StepItem({
     scope: descriptionScope,
     enterAnimation: descriptionEnter,
     exitAnimation: descriptionExit,
-  } = useTextSplitedAnimation(0.5, 0.15);
+  } = useTextSplitedAnimation(0.5, 0.13);
 
   useEffect(() => {
     if (isPresent) {
@@ -71,33 +72,8 @@ export default function StepItem({
             />
           </motion.div>
         </div>
-        <motion.div
-          initial={{ y: -100, x: "100%" }}
-          animate={{
-            y: 0,
-            x: 0,
-            transition: {
-              type: "tween",
-              ease: [0.76, 0, 0.24, 1],
-              duration: 1,
-            },
-          }}
-          exit={{
-            y: -100,
-            x: "100%",
-            transition: {
-              type: "tween",
-              ease: [0.76, 0, 0.24, 1],
-              duration: 0.5,
-            },
-          }}
-        >
-          <Image
-            src={stepsThinker}
-            alt="step thinker"
-            className="step_thinker absolute bottom-0 -right-[6.5rem] md:right-auto md:bottom-auto md:relative  w-[155px] md:w-[221px] md:h-[439px] h-[307px] z-10"
-          />
-        </motion.div>
+        <StepThinkerImage isMobile={true} />
+        <StepThinkerImage isMobile={false} />
       </figure>
       <div className="text-[22px] leading-[31.9px] font-poppins xl:mb-10">
         <h3 ref={titleScope} className="text-black-300 font-semibold">

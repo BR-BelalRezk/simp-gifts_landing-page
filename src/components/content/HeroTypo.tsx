@@ -12,7 +12,7 @@ function HeroText() {
 
   useEffect(() => {
     pEnter();
-  }, [pEnter]);
+  }, [pEnter, pScope]);
   return (
     <p
       ref={pScope}
