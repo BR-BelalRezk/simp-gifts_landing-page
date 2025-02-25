@@ -2,7 +2,6 @@
 // compound component
 
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
 import { cloneElement, createContext, useContext, useState } from "react";
 
 // types
