@@ -2,6 +2,7 @@ import Image from "next/image";
 import heroBG from "@/assets/images/heroBG.png";
 import heroImage from "@/assets/images/heroImage.png";
 import Button from "../ui/Button";
+import Magnetic from "../ui/Magnet";
 
 export default function Hero() {
   return (
@@ -36,13 +37,14 @@ export default function Hero() {
             <span>Simp Gifts is the wishlist platform built for creators.</span>
           </p>
         </div>
-
-        <Button
-          isCircle
-          className="self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto"
-        >
-          Start Now
-        </Button>
+        <Magnetic className="w-fit">
+          <Button
+            isCircle
+            className="self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto"
+          >
+            Start Now
+          </Button>
+        </Magnetic>
       </article>
     </section>
   );
