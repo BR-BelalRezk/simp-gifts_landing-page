@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Urbanist, Yellowtail } from "next/font/google";
 import localFont from "next/font/local";
+import Lenis from "@/components/layout/Lenis";
 
 export const metadata: Metadata = {
   title: "Simp Gifts",
@@ -36,11 +37,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${yellowTail.variable} ${urbanist.variable} ${sombra.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <Lenis>
+        <body
+          className={`${yellowTail.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-clip`}
+        >
+          {children}
+        </body>
+      </Lenis>
     </html>
   );
 }

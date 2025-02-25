@@ -22,11 +22,15 @@ export default {
       colors: {
         red: {
           primary: "#CD1D15",
-          light: "#F8A3A3",
+          "light-1": "#FCD6D6",
+          "light-2": "#F8A3A3",
         },
         white: {
           100: "#FAFAFA",
           body: "#FAF9F6",
+        },
+        black: {
+          100: "#333333",
         },
       },
     },
