@@ -11,7 +11,7 @@ export default function Button({
       className={twMerge(
         "font-light capitalize font-urbanist text-base",
         isCircle
-          ? "size-32 rounded-full flex flex-col items-center justify-center gap-2 bg-red-primary text-white-body"
+          ? "size-32 rounded-full flex flex-col items-center justify-center gap-2 bg-red-primary-1 text-white-body"
           : "py-2 px-4 border rounded-lg",
         className
       )}

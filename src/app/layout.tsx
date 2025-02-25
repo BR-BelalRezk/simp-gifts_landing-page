@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Urbanist, Yellowtail } from "next/font/google";
+import { Urbanist, Yellowtail, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import Lenis from "@/components/layout/Lenis";
 
@@ -29,6 +29,12 @@ const yellowTail = Yellowtail({
   subsets: ["latin"],
   variable: "--font-yellowTail",
 });
+const poppins = Poppins({
+  display: "swap",
+  weight: ["300", "600"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
 
 export default function RootLayout({
   children,
@@ -39,7 +45,7 @@ export default function RootLayout({
     <html lang="en" style={{ scrollbarWidth: "none" }}>
       <Lenis>
         <body
-          className={`${yellowTail.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-clip relative`}
+          className={`${yellowTail.variable} ${poppins.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-clip relative`}
         >
           {children}
         </body>

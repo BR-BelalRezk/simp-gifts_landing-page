@@ -12,6 +12,7 @@ export default {
         urbanist: "var(--font-urbanist)",
         yellowTail: "var(--font-yellowTail)",
         sombra: "var(--font-sombra)",
+        poppins: "var(--font-poppins)",
       },
       container: {
         center: true,
@@ -21,7 +22,8 @@ export default {
       },
       colors: {
         red: {
-          primary: "#CD1D15",
+          "primary-1": "#CD1D15",
+          "primary-2": "#C20006",
           "light-1": "#FCD6D6",
           "light-2": "#F8A3A3",
         },
@@ -32,6 +34,8 @@ export default {
         },
         black: {
           100: "#333333",
+          200: "#828282",
+          300: "#4F4F4F",
         },
       },
     },

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 768px) {
+  .step_thinker {
+    transform: rotateY(180deg);
+  }
+}
+
+.line {
+  @apply overflow-hidden;
+}
+.word {
+  @apply translate-y-full;
+}

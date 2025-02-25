@@ -11,7 +11,7 @@ import Link from "next/link";
 import Button from "../ui/Button";
 import Image from "next/image";
 import tower from "@/assets/images/tower.png";
-import Magnetic from "../ui/Magnet";
+import Magnet from "../ui/Magnet";
 
 export default function Navbar() {
   return (
@@ -46,11 +46,11 @@ export default function Navbar() {
                   </MenuListItem>
                 ))}
               </MenuList>
-              <Magnetic>
+              <Magnet>
                 <Button isCircle className="flex-none">
                   Build Wishlist
                 </Button>
-              </Magnetic>
+              </Magnet>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 
-export default function Magnetic({
+export default function Magnet({
   className,
   children,
 }: React.HTMLAttributes<HTMLDivElement>) {

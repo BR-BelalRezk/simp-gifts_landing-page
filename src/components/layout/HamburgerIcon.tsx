@@ -22,7 +22,7 @@ export default function HamburgerIcon({ toggle }: { toggle?: boolean }) {
               type: "tween",
               ease: [0.76, 0, 0.24, 1],
             }}
-            className="w-5 border-[1.5px] border-red-primary"
+            className="w-5 border-[1.5px] border-red-primary-1"
           />
         ))}
       </div>

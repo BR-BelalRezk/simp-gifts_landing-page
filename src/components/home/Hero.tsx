@@ -3,19 +3,21 @@ import heroBG from "@/assets/images/heroBG.png";
 import heroImage from "@/assets/images/heroImage.png";
 import smallAngel from "@/assets/images/smallAngel.png";
 import Button from "../ui/Button";
-import Magnetic from "../ui/Magnet";
+import Magnet from "../ui/Magnet";
+import Section from "../ui/Section";
+import { HeroHeading, HeroText } from "../content/HeroTypo";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative h-[110vh] md:h-screen scroll-mt-96">
-      <figure>
+    <Section id="hero" className="relative h-[110vh] md:h-screen scroll-mt-96">
+      <figure className="absolute z-20 -bottom-14 md:-bottom-24 right-0">
         <Image
           src={smallAngel}
           alt="small angel"
-          className=" absolute -bottom-14 md:-bottom-24 right-0 h-[90px] w-[100px] md:h-[164px] md:w-[179px]"
+          className=" h-[90px] w-[100px] md:h-[164px] md:w-[179px]"
         />
       </figure>
-      <figure className="absolute h-full w-screen bg-[#FCD6D6] -z-10">
+      <figure className="absolute h-full w-screen bg-[#FCD6D6] z-10">
         <Image
           src={heroBG}
           alt="hero background image"
@@ -27,28 +29,15 @@ export default function Hero() {
           className="mix-blend-luminosity object-cover size-80 md:w-[600px] md:h-auto 2xl:w-[723px] absolute bottom-0 left-0"
         />
       </figure>
-      <article className="pt-[176px] md:pt-[208px] h-full w-fit  mx-auto flex flex-col">
+      <article className="pt-[176px] md:pt-[208px] h-full w-fit  mx-auto flex flex-col z-30 relative">
         <div className="flex items-center flex-col gap-5">
-          <h1 className="text-center">
-            <span className="font-normal block z-20 font-yellowTail text-white-body  text-[38px] leading-[43.7px] md:text-[97px] md:leading-[82.45px]">
-              Gifts that builds
-            </span>
-            <span className="block text-red-primary font-sombra -mt-3 z-10 uppercase font-black text-[34px] leading-[34px] md:text-[68px] md:leading-[68px] ">
-              connection
-            </span>
-          </h1>
-          <p className="text-center font-light font-urbanist text-[#4F4F4F] text-[22px] leading-[31.9px] tracking-[-2%]  max-w-[361px] md:max-w-xl mx-auto">
-            <span className="block">Your fans want to support you.</span>
-            <span className="md:block">
-              Now they can — without invading your privacy.
-            </span>{" "}
-            <span>Simp Gifts is the wishlist platform built for creators.</span>
-          </p>
+          <HeroHeading />
+          <HeroText />
         </div>
-        <Magnetic className="w-fit self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto">
+        <Magnet className="w-fit self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto">
           <Button isCircle>Start Now</Button>
-        </Magnetic>
+        </Magnet>
       </article>
-    </section>
+    </Section>
   );
 }
