@@ -24,10 +24,13 @@ export default {
         red: {
           "primary-1": "#CD1D15",
           "primary-2": "#C20006",
+          "primary-3": "#6A0F0C",
           "light-1": "#FCD6D6",
           "light-2": "#F8A3A3",
+          "light-3": "#B38E88",
         },
         white: {
+          50: "#FEF3F2",
           100: "#FAFAFA",
           200: "#F6E2E0",
           body: "#FAF9F6",

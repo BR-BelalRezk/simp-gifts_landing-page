@@ -1,7 +1,9 @@
 "use client";
+import { useLenis } from "lenis/react";
 // compound component
 
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { cloneElement, createContext, useContext, useState } from "react";
 
 // types
@@ -126,10 +128,23 @@ const MenuList = ({
 
 const MenuListItem = ({
   className,
-  children,
-}: React.HTMLAttributes<HTMLLIElement>) => {
+  text,
+  index,
+  href,
+}: {
+  className: string;
+  text: string;
+  index: number;
+  href: string;
+}) => {
   const { setToggle } = useMenu();
+  const lenis = useLenis();
   const closeMenu = () => setToggle(false);
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const url = new URL(e.currentTarget.href);
+    const hash = url.hash;
+    lenis?.scrollTo(hash, { duration: 2.5 });
+  };
   return (
     <motion.li
       onClick={closeMenu}
@@ -147,7 +162,16 @@ const MenuListItem = ({
       }}
       className={className}
     >
-      {children}
+      <Link
+        onClick={handleClick}
+        href={`#${href}`}
+        className="flex items-start gap-[50px] group"
+      >
+        <span className="text-base">0{index + 1}</span>
+        <span className="italic group-hover:-translate-x-5 duration-500 text-[37px]  leading-[48.1px] lg:text-[64px] lg:leading-[64px]">
+          {text}
+        </span>
+      </Link>
     </motion.li>
   );
 };

@@ -31,19 +31,12 @@ export default function Navbar() {
               <MenuList className="pt-20 flex flex-col md:items-end gap-2 md:gap-3">
                 {navbarItems.map((item, index) => (
                   <MenuListItem
-                    key={item}
-                    className="font-urbanist font-light text-black-100 py-1 border-t border-[#B38E88] last:border-b max-w-[361px] md:min-w-[361px] lg:min-w-[453px] whitespace-nowrap"
-                  >
-                    <Link
-                      href={`#${item}`}
-                      className="flex items-start gap-[50px] group"
-                    >
-                      <span className="text-base">0{index + 1}</span>
-                      <span className="italic group-hover:-translate-x-5 duration-500 text-[37px]  leading-[48.1px] lg:text-[64px] lg:leading-[64px]">
-                        {item}
-                      </span>
-                    </Link>
-                  </MenuListItem>
+                    key={item.label}
+                    text={item.label}
+                    href={item.hash}
+                    index={index}
+                    className="font-urbanist font-light text-black-100 py-1 border-t border-red-light-3 last:border-b max-w-[361px] md:min-w-[361px] lg:min-w-[453px] whitespace-nowrap"
+                  />
                 ))}
               </MenuList>
               <Magnet>
