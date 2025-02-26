@@ -7,7 +7,6 @@ import {
   MenuOverlay,
   MenuToggleButton,
 } from "./Menu";
-import Link from "next/link";
 import Button from "../ui/Button";
 import Image from "next/image";
 import tower from "@/assets/images/tower.png";

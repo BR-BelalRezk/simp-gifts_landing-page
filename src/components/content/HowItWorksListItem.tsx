@@ -53,6 +53,7 @@ export default function HowItWorksListItem({
               delayText={0.2}
               delayImage={0}
               ease="easeOut"
+              exitDuration={0.5}
               description={item.description}
             />
             <HowItWorksListItemContent
@@ -62,6 +63,7 @@ export default function HowItWorksListItem({
               delayImage={1}
               ease="linear"
               delayText={0.7}
+              exitDuration={0.2}
               description={item.description}
             />
           </>

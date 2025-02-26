@@ -11,6 +11,7 @@ export default function HowItWorksListItemContent({
   ease,
   delayText,
   delayImage,
+  exitDuration,
 }: {
   description: string;
   initial: { height: number } | { width: number };
@@ -19,6 +20,7 @@ export default function HowItWorksListItemContent({
   ease: string;
   delayText: number;
   delayImage: number;
+  exitDuration: number;
 }) {
   return (
     <motion.div
@@ -29,7 +31,7 @@ export default function HowItWorksListItemContent({
       }}
       exit={{
         ...initial,
-        transition: { duration: 0.5, ease, delay: 0.2 },
+        transition: { duration: exitDuration, ease, delay: 0.2 },
       }}
       className={className}
     >
