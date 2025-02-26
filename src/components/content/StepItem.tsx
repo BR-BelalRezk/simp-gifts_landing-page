@@ -1,6 +1,5 @@
 import Image from "next/image";
 import steps from "@/assets/images/steps.png";
-import stepsThinker from "@/assets/images/stepsThinker.png";
 import { usePresence, motion } from "motion/react";
 import { useEffect } from "react";
 import useTextSplitedAnimation from "@/hooks/useTextSplitAnimation";
