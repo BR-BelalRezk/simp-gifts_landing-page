@@ -1,7 +1,5 @@
 import { howItWorksItems } from "@/constants";
-import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
-
+import { AnimatePresence } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import HowItWorksListItemContent from "./HowItWorksListItemContent";
 
