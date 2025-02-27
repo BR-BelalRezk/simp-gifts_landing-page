@@ -2,9 +2,9 @@
 import { stepsItems } from "@/constants";
 import { useState } from "react";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
-import StepItem from "./StepItem";
+import FeatureItem from "./FeatureItem";
 
-export default function StepsElements() {
+export default function FeatureElements() {
   const [stepNumber, setStepNumber] = useState(0);
   return (
     <LayoutGroup>
@@ -17,7 +17,7 @@ export default function StepsElements() {
             {stepsItems.map(
               (item, index) =>
                 stepNumber === index && (
-                  <StepItem item={item} key={item.title} />
+                  <FeatureItem item={item} key={item.title} />
                 )
             )}
           </AnimatePresence>

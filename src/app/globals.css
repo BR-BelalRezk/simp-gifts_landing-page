@@ -7,6 +7,9 @@
     transform: rotateY(180deg);
   }
 }
+.sectionImageSeparator {
+  transform: rotateY(180deg);
+}
 
 .line {
   @apply overflow-hidden;

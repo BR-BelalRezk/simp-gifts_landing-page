@@ -1,9 +1,10 @@
 import Section from "../ui/Section";
 import HowItWorksList from "../content/HowItWorksList";
+import { SectionTitleTypeTwo } from "../ui/SectionTitle";
 
 export default function HowItWorks() {
   return (
-    <Section id="howitworks" className="pt-[72px] md:pt-[168px]">
+    <Section id="howitworks" className="pt-24 md:pt-[168px]">
       <div className="bg-white-50 rounded-b-[40px] py-16">
         <div className="container">
           <div className="relative md:w-fit">
@@ -15,9 +16,10 @@ export default function HowItWorks() {
                 Works
               </span>
             </h2>
-            <p className="font-urbanist text-base mt-1.5 md:mt-0 font-light md:absolute md:-right-20 md:top-24 text-center text-black-200">
-              find. share. celebrate.
-            </p>
+            <SectionTitleTypeTwo
+              text={"find. share. celebrate."}
+              className="font-urbanist text-base mt-1.5 md:mt-0 font-light md:absolute md:-right-20 md:top-24 text-center text-black-200"
+            />
           </div>
           <div className="mt-28 w-full">
             <HowItWorksList />

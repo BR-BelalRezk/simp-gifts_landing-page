@@ -4,9 +4,9 @@ import { usePresence, motion } from "motion/react";
 import { useEffect } from "react";
 import useTextSplitedAnimation from "@/hooks/useTextSplitAnimation";
 import { stepsItems } from "@/constants";
-import StepThinkerImage from "./StepThinkerImage";
+import FeatureThinkerImage from "./FeatureThinkerImage";
 
-export default function StepItem({
+export default function FeatureItem({
   item,
 }: {
   item: (typeof stepsItems)[number];
@@ -71,8 +71,8 @@ export default function StepItem({
             />
           </motion.div>
         </div>
-        <StepThinkerImage isMobile={true} />
-        <StepThinkerImage isMobile={false} />
+        <FeatureThinkerImage isMobile={true} />
+        <FeatureThinkerImage isMobile={false} />
       </figure>
       <div className="text-[22px] leading-[31.9px] font-poppins xl:mb-10">
         <h3 ref={titleScope} className="text-black-300 font-semibold">

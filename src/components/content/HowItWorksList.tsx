@@ -3,7 +3,7 @@ import { howItWorksItems } from "@/constants";
 import { useState } from "react";
 import HowItWorksListItem from "./HowItWorksListItem";
 export default function HowItWorksList() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
   return (
     <ul className="flex flex-col gap-2 justify-center items-center w-full xl:flex-row xl:items-start xl:justify-start">
       {howItWorksItems.map((item, index) => (

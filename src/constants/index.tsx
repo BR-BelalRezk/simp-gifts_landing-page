@@ -1,9 +1,14 @@
+import special_1 from "@/assets/images/special-1.png";
+import special_2 from "@/assets/images/special-2.png";
+import special_3 from "@/assets/images/special-3.png";
+import special_4 from "@/assets/images/special-4.png";
+
 export const navbarItems = [
   { label: "Features", hash: "features" },
   { label: "How it works", hash: "howitworks" },
   { label: "Why Simp Gift", hash: "whySimpGift" },
   { label: "Spotlight", hash: "spotlight" },
-  { label: "FAQ", hash: "FAQ" },
+  { label: "FAQ", hash: "faq" },
 ] as const;
 
 export const stepsItems = [
@@ -72,5 +77,88 @@ export const howItWorksItems = [
     title: "say thanks!",
     description:
       "Unbox, share the excitement, and dont forget to say Thank you!",
+  },
+] as const;
+
+export const whySimpGiftItems = [
+  {
+    src: special_1,
+    title: "Simple and Intuitive",
+    description:
+      "Just copy a link, add your favorite gifts, and share your wishlist. Your fans do the rest.",
+  },
+  {
+    src: special_2,
+    title: "Always Free",
+    description:
+      "No hidden fees or charges for creators. Free to create, free to receive, free for creators. Always.",
+  },
+  {
+    src: special_3,
+    title: "Global Gifting",
+    description:
+      "Receive gifts from your supporters no matter where they are. We support payments from 89 countries in 89 currencies.",
+  },
+  {
+    src: special_4,
+    title: "top-notch security",
+    description:
+      "Your data is fully encrypted and secured above industry standards. Our payment system is handled by Stripe payments ensuring everything will be managed by the best in the industry.",
+  },
+] as const;
+
+export const faqItems = [
+  {
+    question: "What is Simp Gifts?",
+    answer:
+      "We are a platform that helps show support and appreciation by fans to their favorites, by crowdfunding gifts.",
+  },
+  {
+    question: "How does it work?",
+    answer:
+      "Once you’ve created a wishlist. You can add any items from anywhere online by copying and pasting the items URL link. then share your wishlist to your community through your social media accounts. Once your community has browsed and bought you a gift. Simp Gifts will manage the ordering and ensuring your gift arrives safely to your door step!",
+  },
+  {
+    question: "Is there a fee to sign up as a supporter?",
+    answer:
+      "Signing up is completely free! You’ll pay only for gifts fot influencer of your choice.",
+  },
+  {
+    question: "How do creators get their gifts?",
+    answer: "Got Questions? We’ve Got Answers!",
+  },
+  {
+    question: "Do you share my personal information?",
+    answer:
+      "Absolutely not! We do not share any of yours or your fans personal information to anyone! You can be sure that all of your information is safe and protected!",
+  },
+  {
+    question: "How do you make money?",
+    answer:
+      "We rely on tips from your community when they purchase a gift to keep us operational to continue providing you these great services!",
+  },
+  {
+    question: "Why would my community buy me gifts?",
+    answer:
+      "Gifting has been a natural human behavior since the beginning of time! Humas have been giving gifts to the people we love to show them our appreciation for them! Now Simp Gifts is help you facilitate this for your growing community! Nothing says I love you more then a gift!",
+  },
+] as const;
+
+export const footerLinks = [
+  {
+    title: "Links",
+    linkList: [
+      { label: "About Simp Gifts", href: "" },
+      { label: "Receive Gifts", href: "" },
+      { label: "Privacy Policy", href: "" },
+      { label: "Terms of Service", href: "" },
+    ],
+  },
+  {
+    title: "Socials",
+    linkList: [
+      { label: "X (twitter)", href: "" },
+      { label: "Instagram", href: "" },
+    ],
   },
 ] as const;

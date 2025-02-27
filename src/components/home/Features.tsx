@@ -1,10 +1,12 @@
-import SectionTitle from "../ui/SectionTitle";
-import StepsElements from "../content/StepsElements";
-export default function Steps() {
+import { SectionTitleTypeOne } from "../ui/SectionTitle";
+import FeatureElements from "../content/FeatureElements";
+import Section from "../ui/Section";
+export default function Features() {
   return (
-    <section className="pt-[72px] md:pt-[168px]">
+    <Section id="features" className="pt-[72px] md:pt-[168px]">
       <div className="container relative">
-        <SectionTitle
+        <SectionTitleTypeOne
+          className="top-[20px] md:top-[45px] -right-[7.5rem] md:-right-[14rem]"
           textOne={"Designed for"}
           textTwo={"Gifting"}
           subText={
@@ -15,8 +17,8 @@ export default function Steps() {
           send &gt; shine &gt; repeat
         </span>
 
-        <StepsElements />
+        <FeatureElements />
       </div>
-    </section>
+    </Section>
   );
 }

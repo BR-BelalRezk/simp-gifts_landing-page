@@ -3,7 +3,11 @@ import { motion } from "motion/react";
 import stepsThinker from "@/assets/images/stepsThinker.png";
 import { twMerge } from "tailwind-merge";
 
-export default function StepThinkerImage({ isMobile }: { isMobile: boolean }) {
+export default function FeatureThinkerImage({
+  isMobile,
+}: {
+  isMobile: boolean;
+}) {
   return (
     <motion.div
       initial={{ y: isMobile ? -50 : -100, x: isMobile ? "-70%" : "100%" }}
