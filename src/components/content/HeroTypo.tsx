@@ -8,7 +8,7 @@ function HeroHeading() {
   return (
     <motion.h1
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 1.3 }}
       className="text-center"
     >
@@ -36,7 +36,7 @@ function HeroText() {
   return (
     <p
       ref={pScope}
-      className="text-center font-light font-urbanist text-[#4F4F4F] text-[22px] leading-[31.9px]   md:max-w-xl mx-auto"
+      className="text-center font-light font-urbanist text-[#4F4F4F] text-base md:text-[22px] md:leading-[31.9px]   md:max-w-xl mx-auto"
     >
       <span className="md:block"></span> Your fans want to support you.{" "}
       <span className="md:block">

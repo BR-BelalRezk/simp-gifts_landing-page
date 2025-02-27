@@ -29,12 +29,12 @@ export default function Hero() {
           className="mix-blend-luminosity object-cover size-80 md:w-[600px] md:h-auto 2xl:w-[723px] absolute bottom-0 left-0"
         />
       </figure>
-      <article className="pt-[176px] md:pt-[208px] h-full w-fit  mx-auto flex flex-col z-30 relative">
+      <article className="pt-[176px] md:pt-[208px] h-full w-fit mx-auto flex flex-col z-30 relative ">
         <div className="flex items-center flex-col gap-5">
           <HeroHeading />
           <HeroText />
         </div>
-        <Magnet className="w-fit self-end mt-auto mb-20 lg:self-start lg:mt-5 lg:ml-5 lg:mb-auto">
+        <Magnet className="w-fit self-end mt-auto mb-20 mr-1.5 lg:self-start lg:mr-0 lg:mt-5 lg:ml-5 lg:mb-auto">
           <Button isCircle>Start Now</Button>
         </Magnet>
       </article>

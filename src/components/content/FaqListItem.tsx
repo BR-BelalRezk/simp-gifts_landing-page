@@ -36,7 +36,7 @@ export default function FaqListItem({
           )}
         />
       </div>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {selectedIndex === index && (
           <motion.div
             initial={{ height: 0 }}
