@@ -35,7 +35,12 @@ export default function HowItWorksListItem({
               : "text-red-light-3 border-red-light-3"
           )}
         >
-          <h3 className="font-urbanist group-hover:translate-x-5 xl:group-hover:translate-x-0 duration-500 xl:group-hover:-translate-y-5 capitalize relative xl:bottom-16 text-nowrap font-light italic text-[37px] leading-[48.1px] xl:w-fit xl:-rotate-90 ">
+          <h3
+            className={twMerge(
+              "font-urbanist group-hover:translate-x-5 xl:group-hover:translate-x-0 duration-500 xl:group-hover:-translate-y-20 capitalize relative   text-nowrap font-light italic text-[37px] leading-[48.1px]  xl:-rotate-90",
+              index === 4 ? "xl:-translate-y-full" : "xl:-translate-y-1/2"
+            )}
+          >
             {item.title}
           </h3>
           <span className="font-yellowTail group-hover:-translate-x-5 xl:group-hover:translate-x-0 xl:group-hover:translate-y-5 duration-500 font-normal text-[38px] leading-[43.7px]">
