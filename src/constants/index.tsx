@@ -1,7 +1,6 @@
 import special_1 from "@/assets/images/special-1.png";
 import special_2 from "@/assets/images/special-2.png";
 import special_3 from "@/assets/images/special-3.png";
-import special_4 from "@/assets/images/special-4.png";
 
 export const navbarItems = [
   { label: "Features", hash: "features" },
@@ -98,12 +97,6 @@ export const whySimpGiftItems = [
     title: "Global Gifting",
     description:
       "Receive gifts from your supporters no matter where they are. We support payments from 89 countries in 89 currencies.",
-  },
-  {
-    src: special_4,
-    title: "top-notch security",
-    description:
-      "Your data is fully encrypted and secured above industry standards. Our payment system is handled by Stripe payments ensuring everything will be managed by the best in the industry.",
   },
 ] as const;
 

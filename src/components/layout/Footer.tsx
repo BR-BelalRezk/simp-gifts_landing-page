@@ -8,7 +8,6 @@ import smallAngel from "@/assets/images/smallAngel-3.png";
 
 export default function Footer() {
   return (
-    // <footer className="pt-[72px] md:pt-[168px] pb-5 relative overflow-hidden">
     <footer
       className="relative h-screen md:h-[50vh] xl:h-screen"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
@@ -66,6 +65,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-    // </footer>
   );
 }

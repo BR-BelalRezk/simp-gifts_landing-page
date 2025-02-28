@@ -42,7 +42,7 @@ const SectionImageSeparatorOne = () => {
           No better way to show your love then through a gift.
         </p>
       </motion.figure>
-      <div ref={ref} className="h-[200vh]" />
+      <div ref={ref} className="h-screen" />
     </div>
   );
 };
@@ -58,15 +58,24 @@ const SectionImageSeparatorTwo = () => {
       pEnter();
     }
   }, [isPInView, pEnter]);
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+  const height = useTransform(scrollYProgress, [0, 1], ["25vh", "100vh"]);
   return (
-    <div className="pt-72">
-      <figure className="bg-red-light-1 w-screen h-[400px] relative overflow-hidden ">
+    <div className="mt-72">
+      <motion.figure
+        style={{ height }}
+        className="bg-red-light-1 w-screen h-screen sticky top-0 overflow-hidden "
+      >
         <Image
           src={sectionImageSepearatorBG_2}
           alt="section image separator"
           height={582}
           width={0}
-          className="mix-blend-luminosity size-full object-cover"
+          className="mix-blend-luminosity size-full object-cover object-right"
         />
         <Image
           src={sectionImageSeparator_2}
@@ -79,7 +88,8 @@ const SectionImageSeparatorTwo = () => {
         >
           Give a gift that speaks louder than words.
         </p>
-      </figure>
+      </motion.figure>
+      <div ref={ref} className="h-screen" />
     </div>
   );
 };

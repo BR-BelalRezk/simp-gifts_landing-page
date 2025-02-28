@@ -7,8 +7,12 @@ import { SectionTitleTypeTwo } from "../ui/SectionTitle";
 export default function FAQ() {
   return (
     <Section id="faq" className="pt-[72px] md:pt-[168px] relative">
-      <figure className="w-[195px] -bottom-[270px] h-[244px] xl:w-[400px] xl:h-[500px] 2xl:w-[469px] 2xl:h-[586px] absolute left-0 xl:bottom-auto xl:top-[525px]">
-        <Image src={faqThinker} alt="faq thinker image" className="size-full" />
+      <figure className="w-[195px] -bottom-[270px]  xl:w-[400px]  2xl:w-[469px]  absolute left-0 xl:bottom-auto xl:top-[525px]">
+        <Image
+          src={faqThinker}
+          alt="faq thinker image"
+          className="size-full object-cover"
+        />
       </figure>
       <div className="container">
         <div className="flex flex-col gap-10 lg:gap-20">

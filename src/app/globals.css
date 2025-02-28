@@ -10,7 +10,15 @@
 .sectionImageSeparator {
   transform: rotateY(180deg);
 }
-
+.spotlightScrollbar::-webkit-scrollbar {
+  @apply h-[8px];
+}
+.spotlightScrollbar::-webkit-scrollbar-track {
+  @apply bg-white-50;
+}
+.spotlightScrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white-200;
+}
 .line {
   @apply overflow-hidden;
 }
