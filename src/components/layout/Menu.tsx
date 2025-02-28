@@ -27,15 +27,12 @@ const useMenu = () => {
 };
 
 // components
-const Menu = ({
-  children,
-  className,
-}: React.HTMLAttributes<HTMLDivElement>) => {
+const Menu = ({ children, className }: React.HTMLAttributes<HTMLElement>) => {
   const [toggle, setToggle] = useState(false);
   const value = { toggle, setToggle };
   return (
     <MenuContext.Provider value={value}>
-      <div className={className}>{children}</div>
+      <nav className={className}>{children}</nav>
     </MenuContext.Provider>
   );
 };
@@ -44,7 +41,7 @@ const MenuToggleButton = ({
   className,
   children,
 }: {
-  className: string;
+  className?: string;
   children: React.JSX.Element;
 }) => {
   const { toggle, setToggle } = useMenu();
@@ -64,32 +61,34 @@ const MenuOverlay = ({
   return (
     <AnimatePresence mode="wait">
       {toggle && (
-        <motion.div
-          initial={"close"}
-          animate={"open"}
-          exit={"close"}
-          variants={{
-            open: {
-              y: 0,
-              transition: {
-                duration: 0.75,
-                type: "tween",
-                ease: [0.76, 0, 0.24, 1],
+        <>
+          <motion.div
+            initial={"close"}
+            animate={"open"}
+            exit={"close"}
+            variants={{
+              open: {
+                x: 0,
+                transition: {
+                  duration: 0.75,
+                  type: "tween",
+                  ease: [0.76, 0, 0.24, 1],
+                },
               },
-            },
-            close: {
-              y: "-100%",
-              transition: {
-                duration: 0.5,
-                type: "tween",
-                ease: [0.76, 0, 0.24, 1],
+              close: {
+                x: "100%",
+                transition: {
+                  duration: 0.5,
+                  type: "tween",
+                  ease: [0.76, 0, 0.24, 1],
+                },
               },
-            },
-          }}
-          className={className}
-        >
-          {children}
-        </motion.div>
+            }}
+            className={className}
+          >
+            {children}
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

@@ -23,7 +23,7 @@ export default function FaqListItem({
           setSelectedIndex(index);
         }
       }}
-      className="border-t last:border-b flex flex-col gap-5 cursor-pointer border-red-light-2 py-3 xl:py-5 lg:w-[700px] xl:w-[800px] 2xl:w-[933px] group"
+      className="border-t last:border-b cursor-pointer border-red-light-2 py-3 md:py-5 xl:py-7 lg:w-[700px] xl:w-[800px] 2xl:w-[933px] group"
     >
       <div className="flex items-center justify-between">
         <h3 className="font-light md:group-hover:translate-x-5 duration-500  font-urbanist italic text-[26px] md:text-[37px] md:leading-[48.1px] leading-[39px] text-black-300">
@@ -39,14 +39,14 @@ export default function FaqListItem({
       <AnimatePresence mode="wait">
         {selectedIndex === index && (
           <motion.div
-            initial={{ height: 0 }}
+            initial={{ height: 0, marginTop: 0 }}
             animate={{
               height: "auto",
-              transition: { duration: 0.5, ease: "linear" },
+              marginTop: 20,
             }}
             exit={{
               height: 0,
-              transition: { duration: 0.5, ease: "linear", delay: 0.3 },
+              marginTop: 0,
             }}
             className="overflow-hidden"
           >
@@ -55,12 +55,12 @@ export default function FaqListItem({
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 0.5, ease: "easeOut", delay: 0.3 },
+                transition: { duration: 0.3, ease: "linear", delay: 0.2 },
               }}
               exit={{
                 opacity: 0,
                 y: 25,
-                transition: { duration: 0.5, ease: "easeOut" },
+                transition: { duration: 0.3, ease: "linear" },
               }}
               className="text-black-400 font-light font-urbanist text-[22px] leading-[31.9px]"
             >

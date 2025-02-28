@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en" style={{ scrollbarWidth: "none" }}>
       <Lenis>
         <body
-          className={`${yellowTail.variable} ${poppins.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-hidden relative`}
+          className={`${yellowTail.variable} ${poppins.variable} ${urbanist.variable} ${sombra.variable} antialiased overflow-x-clip relative`}
         >
           {children}
         </body>

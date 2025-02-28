@@ -4,8 +4,8 @@ import sectionImageSeparator_1 from "@/assets/images/sectionImageSeparator-1.jpg
 import sectionImageSeparator_2 from "@/assets/images/sectionImageSeparator-2.png";
 import sectionImageSepearatorBG_2 from "@/assets/images/SectionImageSepearatorBG-2.png";
 import useTextSplitedAnimation from "@/hooks/useTextSplitAnimation";
-import { useInView } from "motion/react";
-import { useEffect } from "react";
+import { useInView, useScroll, useTransform, motion } from "motion/react";
+import { useEffect, useRef } from "react";
 
 const SectionImageSeparatorOne = () => {
   const { scope: pScope, enterAnimation: pEnter } = useTextSplitedAnimation(
@@ -18,21 +18,31 @@ const SectionImageSeparatorOne = () => {
       pEnter();
     }
   }, [isPInView, pEnter]);
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+  const height = useTransform(scrollYProgress, [0, 1], ["20vh", "100vh"]);
   return (
-    <div className="py-40">
-      <figure className="bg-white-200 w-screen h-[128px] md:h-[112px] relative ">
+    <div className="my-40">
+      <motion.figure
+        style={{ height }}
+        className="bg-white-200 w-screen h-screen sticky top-0"
+      >
         <Image
           src={sectionImageSeparator_1}
           alt="section image separator"
-          className="mix-blend-luminosity size-full object-cover sectionImageSeparator"
+          className="mix-blend-luminosity size-full object-cover object-right sectionImageSeparator"
         />
         <p
           ref={pScope}
-          className="font-urbanist absolute right-5  top-3 md:top-5 lg:top-1.5 text-white-body max-w-[188px] md:max-w-[300px] lg:max-w-[500px] font-light italic text-[22px] leading-[31.9px] lg:leading-[48.1px] lg:text-[37px]"
+          className="font-urbanist absolute right-5  bottom-3 md:bottom-5 lg:bottom-1.5 text-white-body max-w-[188px] md:max-w-[300px] lg:max-w-[500px] font-light italic text-[22px] leading-[31.9px] lg:leading-[48.1px] lg:text-[37px]"
         >
           No better way to show your love then through a gift.
         </p>
-      </figure>
+      </motion.figure>
+      <div ref={ref} className="h-[200vh]" />
     </div>
   );
 };

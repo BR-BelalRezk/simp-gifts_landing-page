@@ -1,6 +1,6 @@
-export default function Logo() {
+export default function Logo({ className }: { className?: string }) {
   return (
-    <figure>
+    <figure className={className}>
       <svg
         width="85"
         height="48"

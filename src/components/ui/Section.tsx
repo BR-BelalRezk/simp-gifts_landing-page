@@ -5,7 +5,7 @@ export default function Section({
   children,
   id,
 }: React.HTMLAttributes<HTMLElement> & {
-  id: (typeof navbarItems)[number]["hash"] | "hero";
+  id: (typeof navbarItems)[number]["hash"];
 }) {
   return (
     <section id={id} className={className}>

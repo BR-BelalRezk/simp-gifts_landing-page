@@ -24,7 +24,7 @@ export default function HowItWorksListItem({
         }
       }}
       key={item.title}
-      className="max-w-[361px] cursor-pointer w-full md:max-w-none xl:flex gap-20 xl:w-fit group"
+      className="max-w-[361px] cursor-pointer w-full md:max-w-none xl:flex xl:w-fit group"
     >
       <div className="xl:w-16">
         <div
@@ -53,17 +53,15 @@ export default function HowItWorksListItem({
               delayText={0.2}
               delayImage={0}
               ease="easeOut"
-              exitDuration={0.5}
               description={item.description}
             />
             <HowItWorksListItemContent
               className="overflow-x-clip hidden xl:flex flex-col gap-5 items-end"
-              animate={{ width: "auto" }}
-              initial={{ width: 0 }}
-              delayImage={1}
+              animate={{ width: "auto", marginLeft: 80 }}
+              initial={{ width: 0, marginLeft: 0 }}
+              delayImage={0.8}
               ease="linear"
               delayText={0.7}
-              exitDuration={0.2}
               description={item.description}
             />
           </>

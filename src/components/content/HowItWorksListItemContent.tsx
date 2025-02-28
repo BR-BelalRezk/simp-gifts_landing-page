@@ -11,16 +11,14 @@ export default function HowItWorksListItemContent({
   ease,
   delayText,
   delayImage,
-  exitDuration,
 }: {
   description: string;
-  initial: { height: number } | { width: number };
-  animate: { height: string } | { width: string };
+  initial: { height: number } | { width: number; marginLeft: number };
+  animate: { height: string } | { width: string; marginLeft: number };
   className: string;
   ease: string;
   delayText: number;
   delayImage: number;
-  exitDuration: number;
 }) {
   return (
     <motion.div
@@ -31,7 +29,6 @@ export default function HowItWorksListItemContent({
       }}
       exit={{
         ...initial,
-        transition: { duration: exitDuration, ease, delay: 0.2 },
       }}
       className={className}
     >
@@ -45,7 +42,7 @@ export default function HowItWorksListItemContent({
         exit={{
           opacity: 0,
           y: -25,
-          transition: { duration: 0.3, ease },
+          // transition: { duration: 0.3, ease },
         }}
         className="h-[185px] max-w-[361px] xl:w-[815px] xl:max-w-none xl:h-[416px] relative mt-16 xl:mt-32"
       >
