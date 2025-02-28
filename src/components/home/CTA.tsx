@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Button from "../ui/Button";
 import Magnet from "../ui/Magnet";
-import ctaImage from "@/assets/images/ctaImage.jpg";
-import CTAText from "../content/CTAText";
-import { twMerge } from "tailwind-merge";
+import { CTAImages, CTAText } from "../content/CTAAnimation";
 
 export default function CTA() {
   return (
@@ -28,25 +25,11 @@ export default function CTA() {
               community
             </span>
           </h3>
-          <figure className="w-[173px] h-[373px] lg:w-[250px] lg:h-[500px] xl:w-[340px] xl:h-[736px] absolute top-2/3 lg:top-1/2 lg:left-10 xl:top-1/3 xl:left-20">
+          <div className="w-[173px] h-[373px] lg:w-[250px] lg:h-[500px] xl:w-[340px] xl:h-[736px] absolute top-2/3 lg:top-1/2 lg:left-10 xl:top-1/3 xl:left-20">
             <div className=" relative size-full">
-              {Array.from({ length: 3 }).map((_, index) => (
-                <Image
-                  key={index}
-                  src={ctaImage}
-                  alt="cta image"
-                  className={twMerge(
-                    "size-full border border-red-light-2 absolute",
-                    index === 0
-                      ? "z-30"
-                      : index === 1
-                      ? "z-20 translate-x-[10px] translate-y-[10px] xl:translate-x-[20px] xl:translate-y-[20px]"
-                      : "z-10 translate-x-[20px] translate-y-[20px] xl:translate-x-[40px] xl:translate-y-[40px]"
-                  )}
-                />
-              ))}
+              <CTAImages />
             </div>
-          </figure>
+          </div>
         </div>
       </div>
     </section>
