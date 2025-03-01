@@ -1,11 +1,12 @@
 "use client";
 
 import useTextSplitedAnimation from "@/hooks/useTextSplitAnimation";
-import { useInView, motion } from "motion/react";
+import { useInView } from "motion/react";
 import Image from "next/image";
 import { useEffect } from "react";
 import ctaImage from "@/assets/images/ctaImage.jpg";
 import { twMerge } from "tailwind-merge";
+import Magnet from "../ui/Magnet";
 
 const CTAText = () => {
   const { scope: pScope, enterAnimation: pEnter } = useTextSplitedAnimation(
@@ -32,7 +33,7 @@ const CTAText = () => {
 
 const CTAImages = () => {
   return (
-    <motion.figure className="size-full cursor-grab" drag dragSnapToOrigin>
+    <Magnet className="size-full cursor-grab">
       {Array.from({ length: 3 }).map((_, index) => (
         <Image
           key={index}
@@ -49,7 +50,7 @@ const CTAImages = () => {
           )}
         />
       ))}
-    </motion.figure>
+    </Magnet>
   );
 };
 
