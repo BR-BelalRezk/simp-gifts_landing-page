@@ -12,6 +12,7 @@ import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
 import Footer from "@/components/layout/Footer";
 import ParallaxSectionTransition from "@/components/content/ParallaxSectionTransition";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <Header />
       <ScrollToUpButton />
       <main className="bg-white-body overflow-x-clip">
-        <ParallaxSectionTransition>
+        <ParallaxSectionTransition element={<Hero />}>
           <Features />
         </ParallaxSectionTransition>
 

@@ -53,7 +53,7 @@ export default function WhySimpGift() {
                 </div>
               </li>
             ))}
-            <li className="flex self-start flex-row-reverse gap-2">
+            <li className="flex self-start flex-col md:flex-row-reverse gap-2">
               <figure className="size-[222px]">
                 <Image
                   className="size-full"

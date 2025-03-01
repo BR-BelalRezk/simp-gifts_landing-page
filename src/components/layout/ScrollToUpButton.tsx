@@ -45,7 +45,7 @@ export default function ScrollToUpButton() {
       ref={ref}
       href={"#hero"}
       onClick={handleClick}
-      className="size-12 scale-0 rounded-full bg-white-200 flex items-center justify-center fixed right-5 bottom-5 z-40"
+      className="size-12 scale-0 rounded-full bg-white-200 flex items-center justify-center fixed right-5 bottom-7 lg:bottom-10 z-40"
     >
       <svg
         width="24"

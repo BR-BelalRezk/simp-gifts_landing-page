@@ -3,14 +3,17 @@ import { footerLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import footerLogo from "@/assets/images/footerLogo.png";
-import redFadedCircle from "@/assets/images/redFadedCircle.png";
-import smallAngel from "@/assets/images/smallAngel-3.png";
+import redFadedCircle from "@/assets/svgs/redFadedCircle.svg";
+import smallAngel from "@/assets/svgs/smallAngel.svg";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer
-      className="relative h-screen md:h-[50vh] xl:h-screen"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      className="relative h-screen md:h-[50vh] xl:h-screen w-screen overflow-x-clip"
+      style={{
+        clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
+      }}
     >
       <div className="relative h-[200vh] md:h-screen md:-top-[50vh] -top-[100vh] xl:h-[200vh] xl:-top-[100vh]">
         <div className="h-screen sticky top-0 md:h-[50vh] md:top-[50vh] xl:top-0 xl:h-screen">
@@ -58,9 +61,12 @@ export default function Footer() {
               </div>
             </div>
 
-            <figure className="w-[171px] h-[113px] xl:w-[356px] xl:h-[235px] absolute left-0 bottom-3">
+            <figure className="w-[171px] h-[113px] xl:w-[356px] xl:h-[235px] absolute left-0 bottom-7">
               <Image src={footerLogo} alt="simp logo" className="size-full" />
             </figure>
+            <p className=" absolute right-5 bottom-1.5 text-base font-light font-urbanist text-red-primary-1 md:text-[22px] md:leading-[31.9px]">
+              &copy; {year} Simp Gifts. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

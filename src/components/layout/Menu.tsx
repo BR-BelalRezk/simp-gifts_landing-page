@@ -76,7 +76,7 @@ const MenuOverlay = ({
                 },
               },
               close: {
-                x: "100%",
+                x: "-100%",
                 transition: {
                   duration: 0.5,
                   type: "tween",
