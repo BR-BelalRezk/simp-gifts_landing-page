@@ -16,12 +16,12 @@ export default function Carousel({
   }, []);
   return (
     <div
-      className="overflow-x-scroll overflow-y-hidden w-full spotlightScrollbar"
+      className="overflow-x-scroll overflow-y-hidden pb-10 w-full spotlightScrollbar"
       role="carousel"
       ref={carouselRef}
     >
       <motion.ul
-        className="cursor-grab flex items-center justify-center  w-full gap-4 md:gap-12"
+        className="cursor-grab flex items-center justify-center  w-full gap-4 md:gap-3"
         role="inner-carousel"
         drag={"x"}
         dragConstraints={{ right: width, left: -width }}

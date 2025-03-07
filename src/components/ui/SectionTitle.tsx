@@ -28,7 +28,7 @@ const SectionTitleTypeOne = ({
 
   return (
     <div className="flex items-start justify-start">
-      <div className="flex flex-col items-start gap-5 md:gap-10">
+      <div className="flex flex-col items-start gap-5">
         <h2 className=" relative w-fit">
           <span className="font-yellowTail relative z-20  font-normal text-[38px] md:text-[97px] md:leading-[82.45px] leading-[43.7px] text-black-100">
             {textOne}
@@ -44,7 +44,7 @@ const SectionTitleTypeOne = ({
         </h2>
         <p
           ref={pScope}
-          className="font-urbanist text-base text-black-200 max-w-[459px] self-end md:self-start"
+          className="font-urbanist text-base text-black-200 max-w-[340px] self-end md:self-start"
         >
           {subText}
         </p>
@@ -53,7 +53,13 @@ const SectionTitleTypeOne = ({
   );
 };
 
-const SectionTitleTypeTwo = ({ className , text}: { className: string, text:string }) => {
+const SectionTitleTypeTwo = ({
+  className,
+  text,
+}: {
+  className: string;
+  text: string;
+}) => {
   const { scope: pScope, enterAnimation: pEnter } = useTextSplitedAnimation(
     0.5,
     0.1
@@ -67,7 +73,7 @@ const SectionTitleTypeTwo = ({ className , text}: { className: string, text:stri
 
   return (
     <p ref={pScope} className={className}>
-     {text}
+      {text}
     </p>
   );
 };
