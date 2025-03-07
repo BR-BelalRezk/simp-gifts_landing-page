@@ -23,7 +23,7 @@ export default function Spotlight() {
                 profileImage={creator1}
                 bioScreenShot={publicWishlist1}
                 name={"Olivia Rhye"}
-                socilaMediaArray={["/rhye123", "@rhye123", "@rhye123"]}
+                socilaMediaArray={["/rhye123", "rhye123", "@rhye123"]}
               />
             ))}
           </Carousel>

@@ -33,7 +33,7 @@ export default function SpotlightItem({
           </h3>
           <div className="flex flex-col items-start gap-2.5">
             {socilaMediaArray.map((item, index) => (
-              <Link href={""} key={index} className="flex items-center gap-1.5">
+              <Link key={item} href={""} className="flex items-center gap-1.5">
                 {icons[index]}
                 <span className="font-urbanist font-light text-base text-white-body">
                   {item}
