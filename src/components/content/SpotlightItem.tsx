@@ -4,8 +4,6 @@ import Twitter from "@/assets/svgs/Twitter";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-const icons = [<Facebook />, <Instagram />, <Twitter />];
-
 export default function SpotlightItem({
   profileImage,
   bioScreenShot,
@@ -34,7 +32,13 @@ export default function SpotlightItem({
           <div className="flex flex-col items-start gap-2.5">
             {socilaMediaArray.map((item, index) => (
               <Link key={item} href={""} className="flex items-center gap-1.5">
-                {icons[index]}
+                {index === 0 ? (
+                  <Facebook />
+                ) : index === 1 ? (
+                  <Instagram />
+                ) : (
+                  <Twitter />
+                )}
                 <span className="font-urbanist font-light text-base text-white-body">
                   {item}
                 </span>
