@@ -7,7 +7,7 @@ import special_4 from "@/assets/images/special-4.png";
 
 export default function WhySimpGift() {
   return (
-    <Section id="whySimpGift" className="pt-[72px] md:pt-[168px]">
+    <Section id="whySimpGift" className="pt-[72px] md:pt-[168px]z">
       <div className="container relative">
         <SectionTitleTypeOne
           className="-right-16 top-[1.3rem] md:top-[50px] md:-right-[170px] lg:-right-[288px] lg:top-12"

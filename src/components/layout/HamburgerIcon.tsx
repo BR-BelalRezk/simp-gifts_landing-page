@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Logo from "./Logo";
 
 export default function HamburgerIcon({ toggle }: { toggle?: boolean }) {
   const span_0 = toggle
@@ -25,6 +26,7 @@ export default function HamburgerIcon({ toggle }: { toggle?: boolean }) {
           />
         ))}
       </div>
+      <Logo />
     </>
   );
 }

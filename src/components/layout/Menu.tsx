@@ -27,12 +27,15 @@ const useMenu = () => {
 };
 
 // components
-const Menu = ({ children, className }: React.HTMLAttributes<HTMLElement>) => {
+const Menu = ({
+  children,
+  className,
+}: React.HTMLAttributes<HTMLDivElement>) => {
   const [toggle, setToggle] = useState(false);
   const value = { toggle, setToggle };
   return (
     <MenuContext.Provider value={value}>
-      <nav className={className}>{children}</nav>
+      <div className={className}>{children}</div>
     </MenuContext.Provider>
   );
 };

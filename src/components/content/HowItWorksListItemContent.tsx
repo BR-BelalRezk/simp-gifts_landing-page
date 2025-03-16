@@ -42,7 +42,6 @@ export default function HowItWorksListItemContent({
         exit={{
           opacity: 0,
           y: -25,
-          // transition: { duration: 0.3, ease },
         }}
         className="h-[185px] max-w-[361px] xl:w-[815px] xl:max-w-none xl:h-[416px] relative mt-16 xl:mt-32"
       >
