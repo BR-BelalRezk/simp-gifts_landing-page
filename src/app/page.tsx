@@ -1,5 +1,4 @@
 import HowItWorks from "@/components/home/HowItWorks";
-import Features from "@/components/home/Features";
 import Header from "@/components/layout/Header";
 import ScrollToUpButton from "@/components/layout/ScrollToUpButton";
 import WhySimpGift from "@/components/home/WhySimpGift";
