@@ -43,7 +43,7 @@ export default function FeatureItem({
   return (
     <li className="flex flex-col gap-10 xl:flex-row xl:gap-0 xl:justify-between xl:items-end">
       <figure className="  relative md:flex items-end self-start flex-row-reverse">
-        <div className="bg-red-primary-2 z-20 rounded-[32px] w-[171px] h-[337px] md:w-[340px] md:h-[671px] relative md:-left-16">
+        <div className="bg-red-primary-2 z-20 rounded-[32px]  h-[250px] md:h-[350px] relative md:-left-16">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{

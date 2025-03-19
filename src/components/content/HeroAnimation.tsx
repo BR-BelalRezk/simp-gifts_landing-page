@@ -54,11 +54,15 @@ const HeroContainer = ({
   scrollYProgress: MotionValue<number>;
   element: React.JSX.Element;
 }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.1]);
   return (
-    <motion.div className="sticky h-screen top-0" style={{ scale }}>
+    <motion.section
+      id="hero"
+      className="sticky h-screen top-0"
+      style={{ opacity }}
+    >
       {element}
-    </motion.div>
+    </motion.section>
   );
 };
 

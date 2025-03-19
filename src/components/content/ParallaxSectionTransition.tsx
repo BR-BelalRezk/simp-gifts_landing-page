@@ -2,11 +2,14 @@
 import { useScroll } from "motion/react";
 import { useRef } from "react";
 import { HeroContainer } from "./HeroAnimation";
+import { stepsItems } from "@/constants";
+import Features from "../home/Features";
 
 export default function ParallaxSectionTransition({
-  children,
   element,
-}: React.HTMLAttributes<HTMLDivElement> & { element: React.JSX.Element }) {
+}: {
+  element: React.JSX.Element;
+}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -17,9 +20,10 @@ export default function ParallaxSectionTransition({
       id="hero"
       ref={ref}
       className="min-h-screen relative scroll-mt-[1000px]"
+      style={{ height: `${(stepsItems.length + 1) * 100}vh` }}
     >
       <HeroContainer scrollYProgress={scrollYProgress} element={element} />
-      {children}
+      <Features scrollYProgress={scrollYProgress} />
     </div>
   );
 }

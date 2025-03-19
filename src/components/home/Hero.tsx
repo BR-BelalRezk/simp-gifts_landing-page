@@ -7,7 +7,7 @@ import { HeroHeading, HeroText } from "../content/HeroAnimation";
 
 export default function Hero() {
   return (
-    <section id="hero" className="h-full">
+    <>
       <figure className="absolute h-full w-screen bg-[#FCD6D6] z-10">
         <Image
           src={heroBG}
@@ -29,6 +29,6 @@ export default function Hero() {
           <Button isCircle>Start Now</Button>
         </Magnet>
       </article>
-    </section>
+    </>
   );
 }

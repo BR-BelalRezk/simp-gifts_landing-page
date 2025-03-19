@@ -4,7 +4,7 @@ import { SectionTitleTypeTwo } from "../ui/SectionTitle";
 
 export default function HowItWorks() {
   return (
-    <Section id="howitworks" className="pt-24 md:pt-[168px]">
+    <Section id="howitworks" className="">
       <div className="bg-white-50 rounded-b-[40px] py-16">
         <div className="container">
           <div className="relative md:w-fit">

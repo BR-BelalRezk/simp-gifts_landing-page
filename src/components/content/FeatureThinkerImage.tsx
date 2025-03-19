@@ -10,7 +10,7 @@ export default function FeatureThinkerImage({
 }) {
   return (
     <motion.div
-      initial={{ y: isMobile ? -50 : -100, x: isMobile ? "-70%" : "100%" }}
+      initial={{ y: isMobile ? -50 : -75, x: isMobile ? "-70%" : "75%" }}
       animate={{
         y: 0,
         x: 0,
@@ -21,8 +21,8 @@ export default function FeatureThinkerImage({
         },
       }}
       exit={{
-        y: isMobile ? -50 : -100,
-        x: isMobile ? "-70%" : "100%",
+        y: isMobile ? -50 : -75,
+        x: isMobile ? "-70%" : "75%",
         transition: {
           type: "tween",
           ease: [0.76, 0, 0.24, 1],
@@ -36,8 +36,8 @@ export default function FeatureThinkerImage({
         className={twMerge(
           "step_thinker z-10",
           isMobile
-            ? "absolute bottom-0 -right-[6.5rem]  w-[155px]  h-[307px] md:hidden"
-            : "right-auto bottom-auto hidden md:block relative w-[221px] h-[439px]"
+            ? "absolute bottom-0 -right-[4.5rem]  w-[100px] md:hidden"
+            : "right-auto bottom-auto hidden md:block relative w-[150px]"
         )}
       />
     </motion.div>

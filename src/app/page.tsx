@@ -20,9 +20,7 @@ export default function Home() {
       <Header />
       <ScrollToUpButton />
       <main className="bg-white-body overflow-x-clip">
-        <ParallaxSectionTransition element={<Hero />}>
-          <Features />
-        </ParallaxSectionTransition>
+        <ParallaxSectionTransition element={<Hero />} />
 
         <HowItWorks />
         <WhySimpGift />

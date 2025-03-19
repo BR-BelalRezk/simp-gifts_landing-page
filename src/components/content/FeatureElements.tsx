@@ -1,16 +1,32 @@
 "use client";
 import { stepsItems } from "@/constants";
 import { useState } from "react";
-import { AnimatePresence, LayoutGroup, motion } from "motion/react";
+import {
+  AnimatePresence,
+  LayoutGroup,
+  motion,
+  MotionValue,
+  useMotionValueEvent,
+} from "motion/react";
 import FeatureItem from "./FeatureItem";
 
-export default function FeatureElements() {
+export default function FeatureElements({
+  scrollYProgress,
+}: {
+  scrollYProgress: MotionValue<number>;
+}) {
   const [stepNumber, setStepNumber] = useState(0);
+  const totalSteps = stepsItems.length;
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    const newStep = Math.min(Math.floor(latest * totalSteps), totalSteps - 1);
+    setStepNumber(newStep);
+  });
   return (
     <LayoutGroup>
       <motion.div
         layout
-        className="flex mt-20 flex-col items-center md:items-start gap-10 xl:gap-20 w-full"
+        className="flex  flex-col items-center md:items-start gap-5  w-full"
       >
         <ul className="w-full">
           <AnimatePresence mode="wait" initial={false}>
@@ -22,7 +38,7 @@ export default function FeatureElements() {
             )}
           </AnimatePresence>
         </ul>
-        <div className="flex items-center gap-4 xl:ml-56">
+        <div className="flex items-center gap-4 self-center">
           {stepsItems.map((_, index) => (
             <button
               onClick={() => setStepNumber(index)}
