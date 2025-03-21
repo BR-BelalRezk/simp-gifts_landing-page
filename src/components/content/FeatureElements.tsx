@@ -26,7 +26,7 @@ export default function FeatureElements({
     <LayoutGroup>
       <motion.div
         layout
-        className="flex  flex-col items-center md:items-start gap-5  w-full"
+        className="flex  flex-col items-center md:items-start gap-5 md:gap-10  w-full"
       >
         <ul className="w-full">
           <AnimatePresence mode="wait" initial={false}>

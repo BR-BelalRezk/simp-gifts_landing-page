@@ -41,9 +41,9 @@ export default function FeatureItem({
     safeToRemove,
   ]);
   return (
-    <li className="flex flex-col gap-10 xl:flex-row xl:gap-0 xl:justify-between xl:items-end">
+    <li className="flex flex-col gap-10 lg:flex-row lg:gap-0 lg:justify-between lg:items-end">
       <figure className="  relative md:flex items-end self-start flex-row-reverse">
-        <div className="bg-red-primary-2 z-20 rounded-[32px]  h-[250px] md:h-[350px] relative md:-left-16">
+        <div className="bg-red-primary-2 z-20 rounded-[32px]  h-[250px] md:h-[50vh] relative md:-left-16">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{

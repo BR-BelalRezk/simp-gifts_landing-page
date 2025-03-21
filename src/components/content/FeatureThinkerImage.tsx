@@ -10,10 +10,15 @@ export default function FeatureThinkerImage({
 }) {
   return (
     <motion.div
-      initial={{ y: isMobile ? -50 : -75, x: isMobile ? "-70%" : "75%" }}
+      initial={{
+        y: isMobile ? -50 : -75,
+        x: isMobile ? "-70%" : "75%",
+        opacity: 0,
+      }}
       animate={{
         y: 0,
         x: 0,
+        opacity: 1,
         transition: {
           type: "tween",
           ease: [0.76, 0, 0.24, 1],
@@ -21,6 +26,7 @@ export default function FeatureThinkerImage({
         },
       }}
       exit={{
+        opacity: 0,
         y: isMobile ? -50 : -75,
         x: isMobile ? "-70%" : "75%",
         transition: {

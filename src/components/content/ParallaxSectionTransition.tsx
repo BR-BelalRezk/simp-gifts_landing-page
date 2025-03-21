@@ -20,7 +20,7 @@ export default function ParallaxSectionTransition({
       id="hero"
       ref={ref}
       className="min-h-screen relative scroll-mt-[1000px]"
-      style={{ height: `${(stepsItems.length + 1) * 100}vh` }}
+      style={{ height: `${(stepsItems.length + 2) * 100}vh` }}
     >
       <HeroContainer scrollYProgress={scrollYProgress} element={element} />
       <Features scrollYProgress={scrollYProgress} />

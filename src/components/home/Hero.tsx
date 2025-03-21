@@ -25,7 +25,7 @@ export default function Hero() {
           <HeroHeading />
           <HeroText />
         </div>
-        <Magnet className="w-fit self-end mt-auto mb-20 mr-1.5 lg:self-start lg:mr-0 lg:mt-5 lg:ml-5 lg:mb-auto">
+        <Magnet className="w-fit self-end mt-auto mb-48 lg:self-start lg:mr-0 lg:mt-5 lg:ml-5 lg:mb-auto">
           <Button isCircle>Start Now</Button>
         </Magnet>
       </article>
